@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    <script type="module" src="https://unpkg.com/friendly-challenge@0.9.0/widget.module.min.js" async defer></script>
+    <script nomodule src="https://unpkg.com/friendly-challenge@0.9.0/widget.min.js" async defer></script>
+
 </head>
 <body>
-    <form>
-        <label>username</label>
-        <input id="username" name="username" type="text"/>
-        <label>password</label>
-        <input id="password" type="password" name="password"/>
-        <input type="submit"/>
-    <script src="app.js"></script>
-</form>
+    <div class="frc-captcha" data-sitekey="FCMJKEG84LHKBUN8"></div>
+
+    <form method="post">
+        Username:<br>
+        <input id="user" type="text" name="user" placeholder="user" required><br><br>
+        Password:<br>
+        <input id="password" type="password" name="password" placeholder="password" required><br><br>
+        <input type="submit" value="login">
+    </form>
+<script src="app.js"></script>
 </body>
 </html>
